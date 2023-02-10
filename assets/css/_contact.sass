@@ -1,0 +1,57 @@
+.location
+    .location-content
+        .gmap_canvas
+            position: relative
+            z-index: 1
+            &::before
+                @include beforeSection
+                z-index: 1
+.contact-form
+    .contact-form-content
+        h3
+            font-size: 1.5rem
+            margin-bottom: 30px
+        .row
+            form.form
+                gap: 20px
+                textarea,
+                input
+                    color: #999999
+                    border: 1px solid #e5e6e9
+                    padding: 10px 15px
+                    // transition: 0.5s
+                    &:focus
+                        color: #fff
+                        outline: 0 solid #e5e6e9
+                .form-group
+                    padding: 0
+                    margin: 0
+                    input
+                        width: calc(50% - 10px)
+                input
+                button.btn
+                    width: fit-content
+                    background: $main-color
+                    padding: 10px 30px
+                    border: 0
+                    color: #fff
+                    text-transform: uppercase
+                    letter-spacing: 2px
+                    transition: 0.5s
+                    &:hover
+                        color: #000
+            .col-content
+                padding-left: 100px
+                ul
+                    gap: 30px
+                    li
+                        gap: 15px
+                        align-items: center
+                        .icon
+                            svg
+                                color: #8f9195
+                                font-size: 1.5rem
+                        .info
+                            gap: 10px
+                            h6,p
+                                font-size: 0.9rem

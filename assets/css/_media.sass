@@ -1,0 +1,139 @@
+
+/* For large devices */
+// @media only screen and (min-width: 1001px)
+
+/* For medium devices */
+// @media only screen and (min-width: 769px) and (max-width: 1199px)
+
+/* For medium and small devices */
+@media only screen and (max-width: 991px)
+    header
+        .collapse
+            position: absolute
+            width: 100%
+            top: calc(100%)
+            z-index: 9
+            a.active
+                color: $second-color !important
+            li
+                a
+                    &:hover
+                        color: $second-color !important
+                a.before-hot
+                    &::before
+                        content: none !important
+        .drop-down
+            left: 50px
+    main
+        .new-arrival
+            h2
+                font-size: 1.8rem !important
+            .col-content
+                margin-bottom: 30px
+        .gallery
+            .img3,
+            .img4
+                .gallery-img-div
+                    height: 630px !important
+        .pupular-item
+            .section-info
+                width: 80% !important
+        .watch-area
+            padding-top: 30px !important
+            .watch-area-content
+                margin-top: 0 !important
+                padding: 0 !important
+            h2
+                font-size: 1.5rem !important
+            .col-content
+                padding: 0 !important
+            .img
+                margin: 30px !important
+        .shop-method
+            .col-content
+                margin-bottom: 30px
+        .shop-watch
+            h2
+                font-size: 1.8rem !important
+        .contact-form
+            .form
+                margin-bottom: 30px !important
+            .col-content
+                padding: 0 !important
+    .footer
+        padding: 20px !important
+        .footer-up
+            .col-content
+                margin-bottom: 30px !important
+// // /* For small devices */
+@media only screen and (max-width: 768px)
+    header
+        .navbar-brand
+            width: 50% !important
+        .icon-x
+            padding: 0 !important
+        .form
+            input,
+            .search-icon
+                font-size: 1rem !important
+            .search-icon
+                margin-left: -6% !important
+        .header-icons
+            display: none !important
+    main
+        .welcome
+            .img
+                display: none
+            h1
+                font-size: 1.8rem !important
+                line-height: 1.5 !important
+                margin-top: 40px
+        .new-arrival
+            h2
+                font-size: 1.8rem !important
+            .col-content
+                margin-bottom: 30px
+        .pupular-item
+            .section-info
+                width: 95% !important
+        .video
+            height: 50vh !important
+            .overlay
+                .icon
+                    font-size: 1.1rem
+                    width: 50px
+                    height: 50px
+                    line-height: 50px
+                .next-video
+                    width: 60% !important
+                    padding: 20px !important
+        .shop-method
+            padding: 20px !important
+            .shop-method-content
+                padding: 20px !important
+        .pupular-item
+            .slider-header
+                flex-direction: column
+                align-items: center
+                gap: 20px
+                ul
+                    li
+                        font-size: 0.8rem
+        .our-mission
+            .our-mission-content
+                padding: 10px !important
+        .blog-area
+            a
+                p
+                    font-size: 0.8rem !important
+                    line-height: 1.2 !important
+        .contact-form
+            padding: 20px !important
+    footer
+        .footer-down
+            .footer-down-content
+                flex-direction: column
+                align-items: center
+                gap: 20px
+                line-height: 2
+                text-align: center

@@ -1,0 +1,64 @@
+.shop-pop
+    min-height: 180vh
+    .pupular-item-content
+        position: relative
+        .slider-header
+            .btns
+                height: fit-content
+                padding: 0
+                li
+                    padding: 10px
+                li.active
+                    position: relative
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 0
+                        bottom: 0
+                        width: 100%
+                        height: 2px
+                        background: $main-color
+            .select
+                position: relative
+                .current
+                    width: fit-content
+                    display: block
+                    padding: 6px 40px 6px 20px
+                    border-radius: 30px
+                    background: $gray-color
+                    font-size: 0.8rem
+                    position: relative
+                    cursor: pointer
+                    &::before
+                        content: "⌵"
+                        // content: "⌃"
+                        position: absolute
+                        right: 15px
+                        top: 0
+                        font-size: 1rem
+                .list
+                    // gap: 10px
+                    position: relative
+                    z-index: 33
+                    background: #fff
+                    inset: 0
+                    top: -30px
+                    border: 1px solid $gray-color
+                    transition: 0.5s
+                    opacity: 0
+                    visibility: hidden
+                    li
+                        padding: 10px 0
+                        cursor: pointer
+                    li.active
+                        font-weight: 600
+                        font-size: 0.94rem
+                .list.active
+                    top: 10px
+                    opacity: 1
+                    visibility: visible
+        .row
+            margin-top: -90px
+            // position: absolute
+            // left: 0
+            // top: 140px

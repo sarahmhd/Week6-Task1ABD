@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="abd-elrahman course week 5 task 1">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
+    <!--=============== BootsTrap ===============-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--=============== WOW JS ===============-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Shop</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header sticky-top py-4 px-3" id="header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg d-flex">
+                <div class="navbar-brand" href="#">
+                    <a href="index.html">
+                        <img src="assets/imgs/logo.png.webp" alt="">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="shop.html">shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">about</a>
+                        </li>
+                        <li class="nav-item drop-item">
+                            <a class="nav-link before-hot" href="about.html">Latest</a>
+                            <ul class="drop-down list-unstyled flex-column">
+                                <li>
+                                    <a href="#">Product list</a>
+                                </li>
+                                <li>
+                                    <a href="#">Product Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item drop-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                            <ul class="drop-down list-unstyled flex-column">
+                                <li>
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item drop-item">
+                            <a class="nav-link" href="#">Pages</a>
+                            <ul class="drop-down list-unstyled flex-column">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cart</a>
+                                </li>
+                                <li>
+                                    <a href="#">Element</a>
+                                </li>
+                                <li>
+                                    <a href="#">Confirmation</a>
+                                </li>
+                                <li>
+                                    <a href="#">Product Checkout</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-icons d-flex">
+                    <div class="icon search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </nav>
+            <form class="search-box">
+                <div class="icon-x">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <input type="text" placeholder="Search Key... ">
+            </form>
+        </div>
+    </header>
+    <!--=============== MAIN ===============-->
+    <main class="main" id="main">
+        <!--=============== SHOP WATCH ===============-->
+        <div class="shop-watch d-flex align-items-center">
+            <div class="container">
+                <div class="shop-watch-content d-flex justify-content-center align-items-center">
+                    <h2>Watch Shop</h2>
+                </div>
+            </div>
+        </div>
+        <!--=============== PUPULAR ITEM ===============-->
+        <div class="pupular-item shop-pop py-5">
+            <div class="container">
+                <div class="pupular-item-content text-center py-5">
+                    <div class="slider-header d-flex justify-content-between">
+                        <ul class="btns d-flex">
+                            <li class="btn active">NewestArrivals</li>
+                            <li class="btn">Price high to low</li>
+                            <li class="btn">Most populer</li>
+                        </ul>
+                        <div class="select">
+                            <span class="current">50 per page</span>
+                            <ul class="list list-unstyled d-flex flex-column">
+                                <li>40 per page</li>
+                                <li>50 per page</li>
+                                <li>60 per page</li>
+                                <li>70 per page</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row slide">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content">
+                                <div class="img">
+                                    <img src="assets/imgs/popular1.png.webp" alt="">
+                                    <div class="overlay">
+                                        <div class="icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                        <div class="add-item">
+                                            <a href="#">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-caption">
+                                    <h3>Thermo Ball Etip Gloves</h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content">
+                                <div class="img">
+                                    <img src="assets/imgs/popular2.png.webp" alt="">
+                                    <div class="overlay">
+                                        <div class="icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                        <div class="add-item">
+                                            <a href="#">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-caption">
+                                    <h3>Thermo Ball Etip Gloves</h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content">
+                                <div class="img">
+                                    <img src="assets/imgs/popular3.png.webp" alt="">
+                                    <div class="overlay">
+                                        <div class="icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                        <div class="add-item">
+                                            <a href="#">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-caption">
+                                    <h3>Thermo Ball Etip Gloves</h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content">
+                                <div class="img">
+                                    <img src="assets/imgs/popular4.png.webp" alt="">
+                                    <div class="overlay">
+                                        <div class="icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                        <div class="add-item">
+                                            <a href="#">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-caption">
+                                    <h3>Thermo Ball Etip Gloves</h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content">
+                                <div class="img">
+                                    <img src="assets/imgs/popular5.png.webp" alt="">
+                                    <div class="overlay">
+                                        <div class="icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                        <div class="add-item">
+                                            <a href="#">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-caption">
+                                    <h3>Thermo Ball Etip Gloves</h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content">
+                                <div class="img">
+                                    <img src="assets/imgs/popular6.png.webp" alt="">
+                                    <div class="overlay">
+                                        <div class="icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                        <div class="add-item">
+                                            <a href="#">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-caption">
+                                    <h3>Thermo Ball Etip Gloves</h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=============== SHOP METHOD ===============-->
+        <div class="shop-method p-5">
+            <div class="container">
+                <div class="shop-method-content p-5">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content d-flex flex-column">
+                                <div class="icon">
+                                    <i class="fa-solid fa-box"></i>
+                                </div>
+                                <h5>Free Shipping Method</h5>
+                                <p class="text-white-50">
+                                    aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content d-flex flex-column">
+                                <div class="icon">
+                                    <i class="fa-solid fa-unlock-keyhole"></i>
+                                </div>
+                                <h5>Free Shipping Method</h5>
+                                <p class="text-white-50">
+                                    aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="col-content d-flex flex-column">
+                                <div class="icon">
+                                    <i class="fa-solid fa-rotate"></i>
+                                </div>
+                                <h5>Free Shipping Method</h5>
+                                <p class="text-white-50">
+                                    aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--=============== FOOTER ===============-->
+    <footer class="footer p-5">
+        <div class="footer-up">
+            <div class="container">
+                <div class="footer-up-content">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="col-content d-flex flex-column">
+                                <div class="logo">
+                                    <img src="assets/imgs/logo.png.webp" alt="">
+                                </div>
+                                <p class="text-black-50">
+                                    Asorem ipsum adipolor sdit amet, consectetur adipisicing elitcf sed do eiusmod tem.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="col-content d-flex flex-column">
+                                <h3>Quick Links</h3>
+                                <ul class="list-unstyled d-flex flex-column">
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Offers & Discounts</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Get Coupon</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="col-content d-flex flex-column">
+                                <h3>New Products</h3>
+                                <ul class="list-unstyled d-flex flex-column">
+                                    <li>
+                                        <a href="#">Woman Cloth</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Fashion Accessories</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Man Accessories</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Rubber made Toys</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="col-content d-flex flex-column">
+                                <h3>Support</h3>
+                                <ul class="list-unstyled d-flex flex-column">
+                                    <li>
+                                        <a href="#">Frequently Asked Questions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Terms & Conditions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Report a Payment Issue</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-down py-5">
+            <div class="container">
+                <div class="footer-down-content py-5 d-flex justify-content-between">
+                    <p class="text-black-50">
+                        Copyright &copy;2023 All rights reserved | This template is made with &#x1F9E1; by <span>sarah
+                            mohamed</span>
+                    </p>
+                    <div class="social">
+                        <ul class="d-flex list-unstyled">
+                            <li>
+                                <i class="fa-brands fa-twitter"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-facebook"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-behance"></i>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-globe"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="list-fixed d-flex flex-column">
+        <i class="fa-solid fa-gears"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+    <div class="up">
+        <button class="btn rounded-circle">
+            <i class="fa-solid fa-arrow-turn-up"></i>
+        </button>
+    </div>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src=" assets/js/shop.js"></script>
+</body>
+
+</html>

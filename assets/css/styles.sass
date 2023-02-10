@@ -1,0 +1,581 @@
+
+// =============== GOOGLE FONTS ===============
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600&display=swap')
+/*=============== 1- components --> Colors , --> mixins , etc... ===============*/
+@import 'components'
+/*========== components ==========*/
+@import 'media'
+/*=============== 2- General Style ===============*/
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+a
+    text-decoration: none
+a.btn
+    background: $main-color
+    color: #fff !important
+    width: fit-content
+    padding: 12px 30px
+    border-radius: 0
+    font-size: 1.2rem
+    position: relative
+    z-index: 1
+    border: 0
+    text-transform: uppercase
+    &::before
+        @include beforeBtn
+    &:hover
+        &::before
+            width: 100%
+.container,
+.container-fluid
+    height: 100%
+
+img
+    width: 100%
+
+h1,h2,h3,h4,h5,h6,p
+    padding: 0
+    margin: 0
+    color: #0b1c39
+button
+    &:focus
+        outline: none !important
+
+html
+    body
+        user-select: none
+        font-family: "Josefin Sans",sans-serif
+        scroll-behavior: smooth
+        header
+            background: #fff
+            color: #000
+            .navbar
+                position: relative
+                justify-content: space-between
+                .navbar-brand
+                    margin-right: auto
+                    a
+                        img
+                            width: 130px
+                .navbar-toggler
+                    color: #000
+                    font-size: 1.5rem
+                .collapse.navbar-collapse
+                    align-items: center
+                    gap: 35px
+                    padding-top: 0
+                    justify-content: center
+                    .navbar-nav
+                        gap: 25px
+                        > li
+                            > a
+                                color: #141517
+                                font-size: 0.9rem
+                                text-transform: capitalize
+                                font-weight: 500
+                                &:hover
+                                    color: $main-color
+                            > a.active
+                                color: $main-color
+                                position: relative
+                            > a.before-hot
+                                position: relative
+                                &::before
+                                    position: absolute
+                                    content: "HOT"
+                                    top: -33%
+                                    background: $main-color
+                                    color: #fff
+                                    border-radius: 6px
+                                    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.12)
+                                    font-size: 0.7rem
+                                    padding: 2px 5px
+                                    right: -30%
+                .collapse.navbar-collapse.active
+                    display: flex
+                    justify-content: center
+                    padding: 20px
+                    text-align: center
+                    background: $main-color
+                .collapse.navbar-collapse.active
+                    .navbar-nav
+                        a.active
+                            &::before
+                                content: none !important
+                .header-icons
+                    gap: 30px
+                    .icon
+                        cursor: pointer
+                        svg
+                            font-size: 1.1rem
+                            transition: 0.3s
+                            &:hover
+                                color: $main-color
+                .drop-down
+                    position: absolute
+                    background: #fff
+                    top: calc(100% + 30px)
+                    opacity: 0
+                    visibility: hidden
+                    min-width: 180px
+                    // overflow: hidden
+                    transition: top 0.5s
+                    border-radius: 6px
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12)
+                    font-size: 0.8rem
+                    &::before
+                        content: ""
+                        position: absolute
+                        inset: 0
+                        width: 100%
+                        height: 3px
+                        z-index: 4
+                        background: $main-color
+                        border-radius: 6px 6px 0 0
+                        z-index: 99998
+                    &::after
+                        content: ""
+                        position: absolute
+                        border-color: transparent transparent $main-color transparent
+                        border-style: solid
+                        border-width: 10px 10px 10px 10px
+                        bottom: calc(100% + -3px)
+                        z-index: -1
+                        left: 10%
+                    li
+                        padding: 10px 25px
+                        a
+                            transition: 0.3s
+                            display: block
+                            color: #000 !important
+                        &:hover
+                            opacity: 1
+                            a
+                                opacity: 1
+                                color: $main-color !important
+                .drop-item
+                    position: relative
+                    padding-right: 10px
+                    &:hover
+                        .drop-down
+                            opacity: 1
+                            visibility: visible
+                            top: calc( 100% + 17px)
+            .search-box
+                position: fixed
+                inset: 0
+                width: 100%
+                height: 100%
+                background: rgba(0, 0, 0, 0.979)
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                visibility: hidden
+                opacity: 0
+                transition: 0.5s
+                .icon-x
+                    background: #333333
+                    width: 50px
+                    height: 50px
+                    border-radius: 50%
+                    line-height: 50px
+                    text-align: center
+                    color: #fff
+                    font-size: 1.1rem
+                    position: absolute
+                    top: 30px
+                    left: 50%
+                    transform: translateX(-50%)
+                    cursor: pointer
+                input
+                    border: 0
+                    border-bottom-color: currentcolor
+                    border-bottom-style: none
+                    border-bottom-width: 0px
+                    border-bottom: 1px solid
+                    background: transparent
+                    color: #999
+                    font-size: 2rem
+                    width: 50%
+                    padding: 15px 10px
+                    outline: none
+                    &:focus
+                        &::placeholder
+                            color: #000
+            .search-box.active
+                visibility: visible
+                opacity: 1
+            .navbar-toggler
+                outline: none !important
+        header.active
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) !important
+        main
+            .welcome
+                background: $gray-color
+                min-height: 100vh
+                overflow: hidden
+                .welcome-content
+                    .row
+                        .col-content
+                            height: 100%
+                            display: flex
+                            flex-direction: column
+                            gap: 50px
+                            justify-content: center
+                            h1
+                                font-size: 5rem
+                                font-weight: bold
+                                line-height: 1.2
+                            p
+                            a.btn
+                                background: $second-color
+                                &::before
+                                    background: $main-color
+                        .img
+                            img
+            .new-arrival
+                .new-arrival-content
+                    h2
+                        font-size: 2.75rem
+                        margin-bottom: 60px
+                        font-weight: 600
+
+                    .row
+                        .col-content
+                            .img
+                                overflow: hidden
+                                margin-bottom: 20px
+                                img
+                                    transition: 1s
+                                    &:hover
+                                        transform: scale(1.1)
+                            .info
+                                gap: 16px
+                                h5
+                                    font-weight: 600
+                                    font-size: 1.4rem
+                                span
+                                    color: $main-color
+            .gallery
+                overflow-x: hidden
+                min-height: 100vh
+                .gallery-content
+                    min-height: 100vh
+                    .row
+                        .img
+                            margin-bottom: 20px
+                            position: relative
+                            overflow: hidden
+                            z-index: 1
+                            &::before
+                                content: ""
+                                position: absolute
+                                inset: 0
+                                background: rgba(0, 0, 0, 0.4)
+                                width: 100%
+                                height: 100%
+                                transition: 0.7s
+                                opacity: 0
+                                visibility: hidden
+                                z-index: 2
+                            .gallery-img-div
+                                transform: scale(1.06)
+                                height: 630px
+                                background-repeat: no-repeat
+                                background-size: cover
+                                transition: 0.7s
+                            &:hover
+                                .gallery-img-div
+                                    transform: scale(1)
+                                &::before
+                                    opacity: 1
+                                    visibility: visible
+                        .img3,
+                        .img4
+                            .gallery-img-div
+                                height: calc(630px / 2 - 10px)
+            .pupular-item
+                .pupular-item-content
+                    .section-info
+                        width: 60%
+                        h2
+                            font-weight: bold
+                            font-size: 2.4rem
+                            margin-bottom: 20px
+                        p
+                            font-size: 0.9rem
+                            line-height: 2
+                    .row
+                        .col-content
+                            margin-bottom: 20px
+                            .img
+                                position: relative
+                                overflow: hidden
+                                img
+                                .overlay
+                                    position: absolute
+                                    inset: 0
+                                    width: 100%
+                                    height: 100%
+                                    .icon
+                                        position: absolute
+                                        top: 10px
+                                        right: 20px
+                                        font-size: 2rem
+                                        opacity: 0
+                                        visibility: hidden
+                                        transition: 0.5s
+                                        svg
+                                    .add-item
+                                        position: absolute
+                                        top: calc( 100% )
+                                        width: 100%
+                                        height: 50px
+                                        line-height: 50px
+                                        background: $main-color
+                                        transition: 0.5s
+                                        a
+                                            color: #fff
+                                &::before
+                                    position: absolute
+                                    content: ""
+                                    bottom: 0
+                                    width: 100%
+                                    height: 3px
+                                    background: $main-color
+                            .col-caption
+                                display: flex
+                                flex-direction: column
+                                gap: 12px
+                                padding: 20px 0
+                                h3
+                                    color: #444444
+                                    font-size: 1.2rem
+                                    font-weight: bold
+                                span
+                                    color: #444444
+                            &:hover
+                                .icon
+                                    opacity: 1 !important
+                                    visibility: visible !important
+                                .add-item
+                                    top: calc( 100% - 50px ) !important
+                    a.btn
+                        margin: 80px 0 30px 0
+                        text-transform: uppercase
+                        padding: 18px 25px
+                        font-size: 1rem
+                        letter-spacing: 1.4px
+                        &::before
+                            @include beforeBtn
+                        &:hover
+                            &::before
+                                width: 100%
+            .video
+                position: relative
+                z-index: 1
+                overflow: hidden
+                .video-content
+                    video
+                        width: 100%
+                        height: 100%
+                        display: block
+                    .overlay
+                        position: absolute
+                        inset: 0
+                        width: 100%
+                        height: 100%
+                        background: linear-gradient(90deg,#000000ce 20% , #ffffff73 20%),linear-gradient(90deg,#000000cb 50% , #ffffff73 50%)
+                        background-size: 80px 30px
+                        .icon
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%,-50%) scale(1)
+                            font-size: 2.5rem
+                            z-index: 3 !important
+                            cursor: pointer
+                            width: 100px
+                            height: 100px
+                            text-align: center
+                            line-height: 100px
+                            border: 3px solid #fff
+                            border-radius: 50%
+                            transition: 0.5s
+                            svg
+                                transition: 0.5s
+                                color: #fff
+                            &:hover
+                                background: #fff
+                                svg
+                                    color: $main-color !important
+                        .next-video
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            width: 30%
+                            background: $main-color
+                            z-index: 3
+                            padding: 50px
+                            font-size: 1.1rem
+                            cursor: pointer
+                            a,
+                            svg
+                                color: #fff
+                            svg
+                                transition: 0.5s
+                                &:hover
+                                    transform: translateX(10px)
+                &::before
+                    @include beforeSection
+                    transition: 0.5s
+                    background: rgba(0, 0, 0, 0.685)
+                    z-index: 2
+                &:hover
+                    &::before
+                        background: rgba(0, 0, 0, 0.885)
+                    .icon
+                        transform: translate(-50%,-50%) scale(1.09) !important
+            .video.remove-before
+                &::before
+                    content: none !important
+            .watch-area
+                .watch-area-content
+                    .row
+                        .col-content
+                            margin-bottom: 20px
+                            gap: 35px
+                            h2
+                                font-size: 3rem
+                                font-weight: bold
+                            p
+                                line-height: 2
+                            a.btn
+                                font-size: 1rem
+                                padding: 18px 25px
+                        .col-content.col-info
+                            // width: 80%
+            .shop-method
+                .shop-method-content
+                    background: $main-color
+                    color: #fff
+                    .row
+                        .col-content
+                            gap: 20px
+                            .icon
+                                svg
+                                    transform: rotateY(180deg)
+                                    font-size: 2.2rem
+                            h5
+                                color: #fff
+                                font-size: 1.13rem
+                                font-weight: bold
+                                letter-spacing: -1px
+                            p
+                                line-height: 1.8
+                                font-size: 0.9rem
+        footer
+            .footer-up
+                .footer-up-content
+                    .row
+                        .col-content
+                            gap: 35px
+                            .logo
+                                width: 120px
+                                img
+                            p
+                                font-size: 0.94rem
+                                line-height: 2
+                            h3
+                                font-size: 1.16rem
+                                font-weight: 500
+                                letter-spacing: -1px
+                            ul
+                                gap: 15px
+                                li
+                                    font-size: 0.9rem
+                                    a
+                                        color: #868c98
+                                        display: block
+                                        transition: 0.5s
+                                    &:hover
+                                        a
+                                            color: $main-color
+                                            transform: translateX(5px)
+            .footer-down
+                .footer-down-content
+                    p
+                        font-size: 0.95rem
+                        letter-spacing: -1px
+                        color: #868c98
+                        span
+                            color: $main-color
+                            text-transform: capitalize
+                            font-size: 0.98rem
+                    .social
+                        ul
+                            gap: 20px
+                            li
+                                svg
+                                    font-size: 0.9rem
+                                    transition: 0.5s
+                                &:hover
+                                    svg
+                                        transform: rotateY(180deg)
+                                        color: $main-color
+        .list-fixed
+            position: fixed
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 9999
+            background: #fff
+            color: #333
+            padding: 20px 10px
+            gap: 15px
+            font-size: 1.2rem
+            border-radius: 10px 0 0 10px
+            cursor: pointer
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+            svg
+                transition: 0.5s
+                &:hover
+                    color: $main-color
+        .up
+            display: none
+            transition: 700ms ease
+            position: fixed
+            bottom: 5%
+            right: 3%
+            z-index: 99
+            background: $main-color
+            border-radius: 50%
+            svg
+                color: #fff
+            .btn
+                width: 50px
+                height: 50px
+                font-size: 1.2rem
+                display: flex
+                justify-content: center
+                align-items: center
+                cursor: pointer
+        .up.active
+            display: block
+
+@import 'shop'
+@import 'about'
+@import 'blog'
+@import 'contact'
+.shop-watch
+    min-height: 75vh
+    background: url("../../assets/imgs/about_hero.png.webp") no-repeat
+    background-size: cover
+    .shop-watch-content
+        h2
+            font-size: 3.5rem
+            font-weight: bold
